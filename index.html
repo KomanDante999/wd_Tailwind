@@ -5,46 +5,287 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./public/style.css">
+  <link rel="stylesheet" href="./public/style.css" />
   <title>Tailwind example</title>
 </head>
 
-<body class="font-serif">
-  <header class="px-5 border-b">
-    <a class="uppercase font-bold text-purple-800" href="">WebDew</a>
-    <nav>
-      <ul class="text-gray-500 font-semibold">
-        <li><a class="inline-block py-3 px-2" href="#">Home</a></li>
-        <li><a class="inline-block py-3 px-2" href="#">About</a></li>
-        <li><a class="inline-block py-3 px-2" href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
+<body class="font-main bg-white dark:bg-slate-900">
+  <div class="max-w-screen-xl mx-auto h-screen grid grid-rows-layout-main">
+    <header class="h-14 px-5 border-b flex items-center justify-between">
+      <a class="uppercase font-bold text-logo-main dark:text-purple-400" href="">WebDew</a>
+      <nav class="hidden md:flex items-center">
+        <ul class="inline-flex items-center">
+          <li>
+            <a class="header-link" href="#">Home</a>
+          </li>
+          <li>
+            <a class="header-link" href="#">About</a>
+          </li>
+          <li>
+            <a class="header-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <ul class="inline-flex items-center">
+          <li>
+            <button class="mr-2 header-btn">
+              Login
+            </button>
+          </li>
+          <li>
+            <button class="header-btn">
+              Register
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <button class="md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </header>
+    
     <div>
       <!-- Breadcrambs -->
-      <div class="py-4 overflow-y-auto whitespace-nowrap">
-        <a class="text-gray-600" href="#">Home</a>
-        <span class="mx-2 text-gray-500">&gt;</span>
-        <a class="text-gray-600" href="#">Naws</a>
-        <span class="mx-2 text-gray-500">&gt;</span>
-        <a class="text-gray-600" href="#">Tech</a>
+      <div class="flex items-center">
+        <div class="flex items-center py-4 overflow-y-auto whitespace-nowrap">
+          <a class="text-gray-600 hover:text-gray-900 transition-colors duration-300 dark:text-slate-400" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+          </a>
+          <span class="mx-2 text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd"
+                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                clip-rule="evenodd" />
+            </svg>
+  
+          </span>
+          <a class="text-gray-600 hover:text-gray-900 transition-colors duration-300 dark:text-slate-400" href="#">News</a>
+          <span class="mx-2 text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd"
+                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                clip-rule="evenodd" />
+            </svg>
+  
+          </span>
+          <a class="text-gray-600 hover:text-gray-900 transition-colors duration-300 dark:text-slate-400" href="#">Tech</a>
+        </div>
       </div>
+      <!-- banners -->
+      <section class="px-2 lg:flex lg:space-x-2">
+        <a class="w-full lg:w-2/3 relative block h-96 mb-4 rounded overflow-hidden bg-gradient-to-tr from-red-500 via-purple-500 to-blue-500 hover:via-purple-500/50"
+          href="#">
+          <div class="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-b from-black/10 to-black/70 "></div>
+          <img class="absolute top-0 left-0 w-full h-full z-0 object-cover" src="./public/images/img-1.jpg" alt="news">
+          <div class="z-20 absolute bottom-0 left-0 p-4">
+            <h2 class="font-semibold text-4xl text-gray-100 leading-tight dark:text-slate-200">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </h2>
+            <div class="flex mt-3">
+              <img class="w-10 h-10 rounded-full object-cover mr-2" src="https://randomuser.me/api/portraits/women/31.jpg"
+                alt="autor">
+              <div>
+                <p class="font-semibold text-sm text-gray-200">Yarla Emmit</p>
+                <time class="text-xs text-gray-400">15 may 2023</time>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="w-full lg:w-1/3 relative block h-96 mb-4 rounded overflow-hidden bg-indigo-300" href="#">
+          <div class="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-b from-black/10 to-black/70 "></div>
+          <img class="absolute top-0 left-0 w-full h-full z-0 object-cover" src="./public/images/img-2.jpg" alt="news">
+          <div class="z-20 absolute bottom-0 left-0 p-4">
+            <h2 class="font-semibold text-4xl text-gray-100 leading-tight dark:text-slate-200">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </h2>
+            <div class="flex mt-3">
+              <img class="w-10 h-10 rounded-full object-cover mr-2" src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="autor">
+              <div>
+                <p class="font-semibold text-sm text-gray-200">Barbara Lozovsky</p>
+                <time class="text-xs text-gray-400">17 may 2023</time>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+  
+      <main class="lg:flex">
+        <!-- news -->
+        <div class="w-full lg:w-2/3">
+          <section>
+            <a class="block w-full lg:flex mb-10" href="#">
+              <img class="w-full lg:w-48 h-48 lg:mr-4 opacity-80 object-cover" src="./public/images/img-3.jpg" alt="news">
+              <div class="flex">
+                <div>
+                  <h3 class="mb-2 text-gray-700 font-bold text-2xl dark:text-slate-200">Atque, ipsam autem reprehenderit</h3>
+                  <p class="text-gray-700 dark:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ipsam autem
+                    reprehenderit perspiciatis aut soluta, ipsa ratione labore fugit obcaecati impedit odio voluptatem!
+                    Repellat
+                    voluptas reprehenderit reiciendis quam similique modi.</p>
+                </div>
+              </div>
+            </a>
+            <a class="block w-full lg:flex mb-10" href="#">
+              <img class="w-full lg:w-48 h-48 lg:mr-4 opacity-80 object-cover" src="./public/images/img-4.jpg" alt="news">
+              <div class="flex">
+                <div>
+                  <h3 class="mb-2 text-gray-700 font-bold text-2xl dark:text-slate-200">Atque, ipsam autem reprehenderit</h3>
+                  <p class="text-gray-700 dark:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ipsam autem
+                    reprehenderit perspiciatis aut soluta, ipsa ratione labore fugit obcaecati impedit odio voluptatem!
+                    Repellat
+                    voluptas reprehenderit reiciendis quam similique modi.</p>
+                </div>
+              </div>
+            </a>
+            <a class="block w-full lg:flex mb-10" href="#">
+              <img class="w-full lg:w-48 h-48 lg:mr-4 opacity-80 object-cover" src="./public/images/img-5.jpg" alt="news">
+              <div class="flex">
+                <div>
+                  <h3 class="mb-2 text-gray-700 font-bold text-2xl dark:text-slate-200">Atque, ipsam autem reprehenderit</h3>
+                  <p class="text-gray-700 dark:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ipsam autem
+                    reprehenderit perspiciatis aut soluta, ipsa ratione labore fugit obcaecati impedit odio voluptatem!
+                    Repellat
+                    voluptas reprehenderit reiciendis quam similique modi.</p>
+                </div>
+              </div>
+            </a>
+          </section>
+  
+          <!-- pagination -->
+          <div class="mt-20 mb-10">
+            <ul class="flex justify-center">
+              <li><a class="pagination-item rounded-l-lg" href="#">Prev</a></li>
+              <li><a class="pagination-item" href="#">1</a></li>
+              <li><a class="pagination-item text-blue-700  bg-blue-100" href="#">2</a></li>
+              <li><a class="pagination-item" href="#">3</a></li>
+              <li><a class="pagination-item" href="#">4</a></li>
+              <li><a class="pagination-item" href="#">5</a></li>
+              <li><a class="pagination-item rounded-r-lg" href="#">Next</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- subscribe -->
+        <div class="w-full lg:w-1/3 px-2">
+          <!-- Topic -->
+          <div class="mb-5">
+            <h5 class="font-bold text-lg text-gray-700 uppercase mb-2 dark:text-slate-200">Popular news</h5>
+            <ul>
+              <li class="px-1 py-4 border-y border-white hover:border-gray-200 transition-colors duration-300">
+                <a class="flex items-center text-gray-600 dark:text-slate-400" href="#">
+                  <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-green-500 to-green-700 "></span>
+                  Vue
+                  <span class="text-gray-500 ml-auto dark:text-slate-400">23 articles</span>
+                </a>
+              </li>
+              <li class="px-1 py-4 border-y border-white hover:border-gray-200 transition-colors duration-300">
+                <a class="flex items-center text-gray-600 dark:text-slate-400" href="#">
+                  <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-blue-500 to-blue-700"></span>
+                  React
+                  <span class="text-gray-500 ml-auto dark:text-slate-400">78 articles</span>
+                </a>
+              </li>
+              <li class="px-1 py-4 border-y border-white hover:border-gray-200 transition-colors duration-300">
+                <a class="flex items-center text-gray-600 dark:text-slate-400" href="#">
+                  <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-red-500 to-red-700"></span>
+                  Angular
+                  <span class="text-gray-500 ml-auto dark:text-slate-400">16 articles</span>
+                </a>
+              </li>
+              <li class="px-1 py-4 border-y border-white hover:border-gray-200 transition-colors duration-300">
+                <a class="flex items-center text-gray-600 dark:text-slate-400" href="#">
+                  <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-orange-500 to-orange-700"></span>
+                  Swelt
+                  <span class="text-gray-500 ml-auto dark:text-slate-400">7 articles</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="border border-gray-400 border-dotted"></div>
+          <div class="my-5">
+            <h5 class="font-bold text-lg text-gray-700 uppercase mb-2 dark:text-slate-200">
+              Subscribe
+            </h5>
+            <p class="text-gray-600 mb-4 dark:text-slate-400">Subscribe to our newslettets</p>
+            <input
+              class="w-full p-2 border rounded-t text-gray-700 bg-gray-100 hover:border-gray-600 transition-colors duration-300"
+              placeholder="your email address" type="email" />
+            <button
+              class="w-full px-4 py-2 bg-indigo-600 text-white rounded-b hover:bg-indigo-800 transition-colors duration-300">Subscribe</button>
+          </div>
+          <div class="border border-gray-400 border-dotted"></div>
+        </div>
+      </main>
     </div>
-  </main>
 
-  <footer class="border-t-2 mt-10 py-10 px-2">
-    <div>
-      <div>
-        <h6 class="mb-4 font-semibold text-gray-600">Company</h6>
-        <ul>
-          <li><a class="inline-block py-2 text-gray-500" href="#">Team</a></li>
-          <li><a class="inline-block py-2 text-gray-500" href="#">About Us</a></li>
-        </ul>
+    <footer class="border-t-2 mt-10 py-10 px-2">
+      <div class="md:flex">
+        <div class="w-full md:w-2/5 mb-5">
+          <h6 class="mb-4 font-semibold text-gray-600 dark:text-slate-200">Company</h6>
+          <ul>
+            <li>
+              <a class="footer-link" href="#">Team</a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">About Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full md:w-2/5">
+          <h6 class="mb-4 font-semibold text-gray-600 dark:text-slate-200">Content</h6>
+          <ul>
+            <li>
+              <a class="footer-link" href="#">Block</a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">Policy</a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">Documentation</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/5">
+          <h6 class="mb-4 font-semibold text-gray-600 dark:text-slate-200">Contact Us</h6>
+          <ul class="flex">
+            <li class="mr-2">
+              <a class="footer-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-7 h-7">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                </svg>
+              </a>
+            </li>
+            <li class="mr-2">
+              <a class="footer-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-7 h-7">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-7 h-7">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 
 </html>
